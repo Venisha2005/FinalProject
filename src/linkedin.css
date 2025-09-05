@@ -1,0 +1,68 @@
+.speakers-section {
+  padding: 60px 100px;
+  background: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 60px;
+}
+
+.speaker-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 10px;
+  transform-origin: center;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+  text-align: left;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+}
+
+.info p {
+  margin: 0;
+  font-size: 14px;
+  color: gray;
+}
+
+.linkedin-btn {
+  border: 1px solid black;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.linkedin-btn:hover {
+  background: black;
+  color: white;
+}

@@ -1,0 +1,132 @@
+.numbers-page {
+  min-height: 100vh;
+  
+  background: linear-gradient(
+    to top,
+    #ff1493 0%,
+    #ff69b4 25%,
+    #ffb6c1 50%,
+    #ffc0cb 75%,
+    #ff69b4 100%
+  );
+  background-size: 100% 100%;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+
+  /* Padding still applies to top/bottom spacing */
+  padding: clamp(60px, 10vw, 100px) 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 6vw, 80px);
+
+  align-items: center;           /* Center horizontally */
+  justify-content: flex-start;   /* 🔥 Align to top */
+}
+
+
+
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  transition: transform 0.2s linear;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+
+.box {
+  width: clamp(200px, 28vw, 320px);
+  height: clamp(110px, 16vw, 150px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+  font-weight: bold;
+  border-radius: 25px;
+  color: #111;
+  border: 2px solid black;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.box span {
+  display: block;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-weight: normal;
+  color: #555;
+  margin-top: 5px;
+}
+
+@media (min-width: 1024px) {
+  .numbers-page {
+    padding: 50px 20px;
+    gap: 40px;
+  }
+
+  .row {
+    gap: 20px;
+  }
+
+  .row-heading {
+    margin: 20px 0 10px;
+  }
+
+  .row-heading p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .row-heading h2 {
+    font-size: 22px;
+    margin: 5px 0 0;
+  }
+
+  .box:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 1023px) {
+  .numbers-page {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .numbers-page {
+    padding: 40px 10px;
+  }
+
+  .row {
+    gap: 15px;
+  }
+}
+h1.row-heading {
+  text-align: center;
+  margin: 20px 0 10px;
+  color: black;
+}
+
+.row-heading p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.row-heading h2 {
+  margin: 5px 0 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+}
+
+

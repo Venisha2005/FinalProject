@@ -1,0 +1,134 @@
+.services-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+
+.services-intro {
+  font-size: clamp(14px, 1.8vw, 18px);
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.services-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  font-size: clamp(14px, 1.8vw, 18px);
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  opacity: 0;
+}
+
+/* Slide-in animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.services-list.left .service-item { animation: slideInLeft 500ms ease-out forwards; }
+.services-list.left .service-item:nth-child(2) { animation-delay: 120ms; }
+.services-list.left .service-item:nth-child(3) { animation-delay: 240ms; }
+
+.services-list.right .service-item { animation: slideInRight 500ms ease-out forwards; }
+.services-list.right .service-item:nth-child(2) { animation-delay: 120ms; }
+.services-list.right .service-item:nth-child(3) { animation-delay: 240ms; }
+
+.checkmark {
+  color: black;
+  background: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.services-center {
+  position: relative;
+  width: clamp(160px, 22vw, 240px);
+  height: clamp(160px, 22vw, 240px);
+}
+
+.circuit-circle {
+  width: 100%;
+  height: 100%;
+}
+
+.sim-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(48px, 8vw, 60px);
+  height: clamp(48px, 8vw, 60px);
+  transform: translate(-50%, -50%);
+}
+
+.services-button {
+  margin: 40px auto 0;
+  background: #00c896;
+  color: black;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+}
+
+.services-button:hover {
+  background: #00b386;
+}
+
+@media (max-width: 900px) {
+  .services-content {
+    justify-content: center;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-overlay {
+    padding: 20px 16px;
+  }
+
+  .services-list {
+    min-width: 160px;
+  }
+
+  .services-button {
+    width: 100%;
+    max-width: 360px;
+  }
+}
